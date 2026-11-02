@@ -1,0 +1,41 @@
+/* responsive.css – breakpoint overrides. Base styles are desktop; these adjust for smaller screens. */
+
+/* Tablet and below */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; text-align: center; }
+  .hero-art { order: -1; }
+  .hero-art img { max-width: 420px; }
+  .continue-card { margin-inline: auto; text-align: left; }
+  .subject-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Phones: hide top nav links, show bottom bar */
+@media (max-width: 640px) {
+  .top-nav { display: none; }
+  .header-inner { justify-content: center; }
+  body { padding-bottom: 76px; }  /* so the bottom bar never covers content */
+  .pillars { gap: 0.6rem; }
+  .pillar { padding: 0.9rem 0.4rem; }
+  .pillar strong { font-size: 1.1rem; }
+  .pillar span:last-child { font-size: 0.85rem; }
+  .btn { width: 100%; }
+  .subject-card { min-height: 130px; padding: 0.9rem; }
+
+  .bottom-nav {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    position: fixed; inset: auto 0 0 0; z-index: 30; background: var(--surface);
+    box-shadow: 0 -4px 16px rgba(36, 50, 74, 0.1); padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bottom-nav a {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 64px; font-size: 0.8rem; font-weight: 700; text-decoration: none; color: var(--text-secondary);
+  }
+  .bottom-nav a span { font-size: 1.5rem; line-height: 1.1; }
+  .bottom-nav a.active { color: var(--blue-dark); background: #EAF2FF; }
+}
+
+/* Very small phones (360px) */
+@media (max-width: 380px) {
+  .subject-grid { gap: 0.7rem; }
+  .s-name { font-size: 1.1rem; }
+}

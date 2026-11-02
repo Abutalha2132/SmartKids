@@ -1,0 +1,46 @@
+/* style.css – design tokens (variables), reset, typography, page layout */
+:root {
+  --primary-blue: #4F9CF9;  --primary-green: #38C98A;  --primary-yellow: #FFD75A;
+  --primary-orange: #FF9F43; --primary-purple: #8B7CF6; --primary-pink: #FF7EB6;
+  --background: #F7FAFF;    --surface: #FFFFFF;
+  --text-primary: #24324A;  --text-secondary: #667085; --text-muted: #98A2B3;
+  --success: #22B573; --danger: #EF5B5B; --warning: #F5A623;
+
+  /* Darker shades used only where text sits on a colour, so contrast stays readable */
+  --blue-dark: #2563C9;  --green-dark: #167A52;  --orange-dark: #A85A00;
+  --purple-dark: #5B4BC4; --pink-dark: #B8326F;
+
+  --radius: 20px;
+  --shadow: 0 6px 20px rgba(36, 50, 74, 0.08);
+  --font-heading: "Fredoka", "Noto Sans Devanagari", "Noto Naskh Arabic", "Trebuchet MS", sans-serif;
+  --font-body: "Nunito", "Noto Sans Devanagari", "Noto Naskh Arabic", "Segoe UI", sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+  background: var(--background); color: var(--text-primary);
+  font-family: var(--font-body); font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem); line-height: 1.5;
+}
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; line-height: 1.15; margin: 0 0 0.5rem; }
+h1 { font-size: clamp(2rem, 1.4rem + 3vw, 3.25rem); }
+h2 { font-size: clamp(1.35rem, 1.1rem + 1.2vw, 1.9rem); }
+p { margin: 0 0 1rem; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+main { flex: 1; }
+
+.container { width: 100%; max-width: 1240px; margin-inline: auto; padding-inline: clamp(1rem, 4vw, 2rem); }
+.muted { color: var(--text-secondary); }
+[hidden] { display: none !important; }
+
+/* Keyboard focus must always be visible */
+:focus-visible { outline: 4px solid var(--primary-purple); outline-offset: 3px; border-radius: 12px; }
+
+.skip-link { position: absolute; left: -999px; top: 0; background: var(--text-primary); color: #fff; padding: 0.75rem 1rem; z-index: 100; }
+.skip-link:focus { left: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

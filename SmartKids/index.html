@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmartKids – Learn • Practice • Assess</title>
+  <meta name="description" content="SmartKids is a free, no-login learning app for children aged 4–12: A–Z, English, Maths, General Knowledge, quizzes and games.">
+  <meta name="theme-color" content="#4F9CF9">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta property="og:title" content="SmartKids – Learn • Practice • Assess">
+  <meta property="og:description" content="Free learning games, lessons and quizzes for kids aged 4–12.">
+  <meta property="og:image" content="assets/logo/smartkids-logo.jpeg">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&family=Noto+Naskh+Arabic:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/screens.css">
+  <link rel="stylesheet" href="css/polish.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="SmartKids home"><img class="brand-icon" src="assets/logo/icon-192.png" alt="" width="40" height="40"><span class="b1">S</span><span class="b2">m</span><span class="b3">a</span><span class="b4">r</span><span class="b5">t</span><span class="b6">K</span><span class="b2">i</span><span class="b3">d</span><span class="b4">s</span></a>
+      <nav class="top-nav" aria-label="Main">
+        <a href="#home" class="nav-link" data-nav="home">Home</a>
+        <a href="#learn" class="nav-link" data-nav="learn">Learn</a>
+        <a href="#practice" class="nav-link" data-nav="practice">Practice</a>
+        <a href="#quiz" class="nav-link" data-nav="quiz">Quiz</a>
+        <a href="#games" class="nav-link" data-nav="games">Games</a>
+        <a href="#progress" class="nav-link" data-nav="progress">Progress</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Every screen is drawn into this element by js/app.js -->
+  <main id="app" class="container" tabindex="-1"></main>
+  <footer class="site-footer"><div class="container">
+    <img class="footer-logo" src="assets/logo/icon-192.png" alt="" width="48" height="48"><p><strong>SmartKids</strong> · Learn • Practice • Assess</p>
+    <p class="muted">No login. No personal data. Progress stays on this device.</p>
+  </div></footer>
+  <nav class="bottom-nav" aria-label="Main">
+    <a href="#home" data-nav="home"><span aria-hidden="true">🏠</span>Home</a>
+    <a href="#learn" data-nav="learn"><span aria-hidden="true">📚</span>Learn</a>
+    <a href="#practice" data-nav="practice"><span aria-hidden="true">🧩</span>Practice</a>
+    <a href="#quiz" data-nav="quiz"><span aria-hidden="true">📝</span>Quiz</a>
+    <a href="#progress" data-nav="progress"><span aria-hidden="true">🏆</span>Progress</a>
+  </nav>
+  <script src="data/content.js"></script>
+  <script src="data/more.js"></script>
+  <script src="data/localLanguage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
